@@ -7,18 +7,24 @@
 //
 import UIKit
 import Alamofire
-
+import SwiftyJSON
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Alamofire.request(.GET, "http://test.holmusk.com/food/search", parameters: ["q" : "cucumber"]).responseString(encoding: NSStringEncoding()) { (_, _, string, error) -> Void in
-            println(string)
-            println(error)
-        }
-
-   
+       
     
+        Alamofire.request(.GET, "http://test.holmusk.com/food/search", parameters: ["q" : "cucumber"]).responseJSON(options: NSJSONReadingOptions()) { (req, res, json, error) -> Void in
+            if(error != nil) {
+                NSLog("Error: \(error)")
+                println(req)
+                println(res)
+            }
+            else {
+                var json = JSON(json!)
+                println(json)
+            }
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
