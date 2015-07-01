@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		39988D4C76B21AAA9FA018A2 /* Pods_iOS_Developer_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F54A717AE266596571CEE5A /* Pods_iOS_Developer_Challenge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EC4951B11B4473D70094082E /* FoodModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4951B01B4473D70094082E /* FoodModels.swift */; };
+		EC4951B31B447B960094082E /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4951B21B447B960094082E /* InitialViewController.swift */; };
 		EC960B551B43E10A008DCF56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC960B531B43E10A008DCF56 /* Main.storyboard */; };
 		EC960B571B43E10A008DCF56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC960B561B43E10A008DCF56 /* Images.xcassets */; };
 		EC960B5A1B43E10A008DCF56 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC960B581B43E10A008DCF56 /* LaunchScreen.xib */; };
@@ -36,6 +38,8 @@
 		2023EE8DF810325FA8F95A40 /* Pods-iOS-Developer-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Developer-Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Developer-Challenge/Pods-iOS-Developer-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		78AF41BC12CE64AD9BF05940 /* Pods-iOS-Developer-Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Developer-Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Developer-Challenge/Pods-iOS-Developer-Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		9F54A717AE266596571CEE5A /* Pods_iOS_Developer_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Developer_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC4951B01B4473D70094082E /* FoodModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodModels.swift; sourceTree = "<group>"; };
+		EC4951B21B447B960094082E /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		EC960B4A1B43E10A008DCF56 /* iOS-Developer-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Developer-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC960B4E1B43E10A008DCF56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC960B541B43E10A008DCF56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +107,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EC4951AF1B4473C90094082E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC4951B01B4473D70094082E /* FoodModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		EC960B411B43E10A008DCF56 = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +138,7 @@
 		EC960B4C1B43E10A008DCF56 /* iOS-Developer-Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				EC960B751B43EA4C008DCF56 /* Models */,
+				EC4951AF1B4473C90094082E /* Models */,
 				EC960B6F1B43E18A008DCF56 /* AppDelegate */,
 				EC960B711B43E18A008DCF56 /* ViewControllers */,
 				EC960B531B43E10A008DCF56 /* Main.storyboard */,
@@ -175,15 +187,9 @@
 			isa = PBXGroup;
 			children = (
 				EC960B721B43E18A008DCF56 /* ViewController.swift */,
+				EC4951B21B447B960094082E /* InitialViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		EC960B751B43EA4C008DCF56 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +345,8 @@
 			files = (
 				EC960B741B43E18A008DCF56 /* ViewController.swift in Sources */,
 				EC960B731B43E18A008DCF56 /* AppDelegate.swift in Sources */,
+				EC4951B11B4473D70094082E /* FoodModels.swift in Sources */,
+				EC4951B31B447B960094082E /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
