@@ -1,0 +1,6 @@
+framework module JSONModel {
+  umbrella header "Pods-iOS-Developer-Challenge-JSONModel-umbrella.h"
+
+  export *
+  module * { export * }
+}

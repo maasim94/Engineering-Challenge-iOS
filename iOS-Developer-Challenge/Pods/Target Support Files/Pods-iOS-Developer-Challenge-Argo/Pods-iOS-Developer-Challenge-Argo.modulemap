@@ -1,0 +1,6 @@
+framework module Argo {
+  umbrella header "Pods-iOS-Developer-Challenge-Argo-umbrella.h"
+
+  export *
+  module * { export * }
+}

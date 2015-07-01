@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E05D3733-2E17-4C6F-9F28-690FD078AB84</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iOS-Developer-Challenge</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EBE5088729560A991E3D85874235FE04DE9FF238</key>
+		<string>https://github.com/maasim94/Engineering-Challenge-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS-Developer-Challenge/iOS-Developer-Challenge.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EBE5088729560A991E3D85874235FE04DE9FF238</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/maasim94/Engineering-Challenge-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EBE5088729560A991E3D85874235FE04DE9FF238</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EBE5088729560A991E3D85874235FE04DE9FF238</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Engineering-Challenge-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

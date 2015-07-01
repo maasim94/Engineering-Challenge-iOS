@@ -1,0 +1,6 @@
+framework module Box {
+  umbrella header "Pods-iOS-Developer-Challenge-Box-umbrella.h"
+
+  export *
+  module * { export * }
+}
