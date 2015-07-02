@@ -17,10 +17,6 @@
 		EC960B731B43E18A008DCF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC960B701B43E18A008DCF56 /* AppDelegate.swift */; };
 		EC960B741B43E18A008DCF56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC960B721B43E18A008DCF56 /* ViewController.swift */; };
 		ECF0763E1B43F57C007777D0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF076381B43F57C007777D0 /* Alamofire.framework */; };
-		ECF0763F1B43F57C007777D0 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF076391B43F57C007777D0 /* Argo.framework */; };
-		ECF076401B43F57C007777D0 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF0763A1B43F57C007777D0 /* Box.framework */; };
-		ECF076411B43F57C007777D0 /* JSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF0763B1B43F57C007777D0 /* JSONModel.framework */; };
-		ECF076421B43F57C007777D0 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF0763C1B43F57C007777D0 /* Runes.framework */; };
 		ECF076431B43F57C007777D0 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF0763D1B43F57C007777D0 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +36,7 @@
 		9F54A717AE266596571CEE5A /* Pods_iOS_Developer_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Developer_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4951B01B4473D70094082E /* FoodModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodModels.swift; sourceTree = "<group>"; };
 		EC4951B21B447B960094082E /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		EC833D051B453ADF003C18C4 /* iOS-Developer-Challenge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-Developer-Challenge-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC960B4A1B43E10A008DCF56 /* iOS-Developer-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Developer-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC960B4E1B43E10A008DCF56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC960B541B43E10A008DCF56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,10 +49,6 @@
 		EC960B721B43E18A008DCF56 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ECED2D4E1B43F216009BB971 /* iOS_Developer_Challenge_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = iOS_Developer_Challenge_Header.h; path = "iOS-Developer-ChallengeTests/iOS_Developer_Challenge_Header.h"; sourceTree = SOURCE_ROOT; };
 		ECF076381B43F57C007777D0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Pods-iOS-Developer-Challenge/Alamofire.framework"; sourceTree = "<group>"; };
-		ECF076391B43F57C007777D0 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = "Pods/../build/Debug-iphoneos/Pods-iOS-Developer-Challenge/Argo.framework"; sourceTree = "<group>"; };
-		ECF0763A1B43F57C007777D0 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = "Pods/../build/Debug-iphoneos/Pods-iOS-Developer-Challenge/Box.framework"; sourceTree = "<group>"; };
-		ECF0763B1B43F57C007777D0 /* JSONModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONModel.framework; path = "Pods/../build/Debug-iphoneos/Pods-iOS-Developer-Challenge/JSONModel.framework"; sourceTree = "<group>"; };
-		ECF0763C1B43F57C007777D0 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = "Pods/../build/Debug-iphoneos/Pods-iOS-Developer-Challenge/Runes.framework"; sourceTree = "<group>"; };
 		ECF0763D1B43F57C007777D0 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/Pods-iOS-Developer-Challenge/SwiftyJSON.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,10 +58,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECF0763E1B43F57C007777D0 /* Alamofire.framework in Frameworks */,
-				ECF0763F1B43F57C007777D0 /* Argo.framework in Frameworks */,
-				ECF076401B43F57C007777D0 /* Box.framework in Frameworks */,
-				ECF076411B43F57C007777D0 /* JSONModel.framework in Frameworks */,
-				ECF076421B43F57C007777D0 /* Runes.framework in Frameworks */,
 				ECF076431B43F57C007777D0 /* SwiftyJSON.framework in Frameworks */,
 				39988D4C76B21AAA9FA018A2 /* Pods_iOS_Developer_Challenge.framework in Frameworks */,
 			);
@@ -97,10 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				ECF076381B43F57C007777D0 /* Alamofire.framework */,
-				ECF076391B43F57C007777D0 /* Argo.framework */,
-				ECF0763A1B43F57C007777D0 /* Box.framework */,
-				ECF0763B1B43F57C007777D0 /* JSONModel.framework */,
-				ECF0763C1B43F57C007777D0 /* Runes.framework */,
 				ECF0763D1B43F57C007777D0 /* SwiftyJSON.framework */,
 				9F54A717AE266596571CEE5A /* Pods_iOS_Developer_Challenge.framework */,
 			);
@@ -188,6 +173,7 @@
 			children = (
 				EC960B721B43E18A008DCF56 /* ViewController.swift */,
 				EC4951B21B447B960094082E /* InitialViewController.swift */,
+				EC833D051B453ADF003C18C4 /* iOS-Developer-Challenge-Bridging-Header.h */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -476,6 +462,7 @@
 			baseConfigurationReference = 2023EE8DF810325FA8F95A40 /* Pods-iOS-Developer-Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-iOS-Developer-Challenge",
@@ -483,6 +470,8 @@
 				INFOPLIST_FILE = "iOS-Developer-Challenge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS-Developer-Challenge/ViewControllers/iOS-Developer-Challenge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -491,6 +480,7 @@
 			baseConfigurationReference = 78AF41BC12CE64AD9BF05940 /* Pods-iOS-Developer-Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-iOS-Developer-Challenge",
@@ -498,6 +488,7 @@
 				INFOPLIST_FILE = "iOS-Developer-Challenge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS-Developer-Challenge/ViewControllers/iOS-Developer-Challenge-Bridging-Header.h";
 			};
 			name = Release;
 		};
