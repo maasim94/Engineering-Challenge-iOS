@@ -80,9 +80,8 @@ class InitialViewController: UIViewController {
                     }
                     allData.addObject(foodModel)
                     //realmArray.append(foodModel)
-                    
                     realm.write {
-                        realm.add(foodModel)
+                        realm.add(foodModel, update: true)
                     }
 //                    println(foodModel)
 
