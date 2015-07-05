@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let realm = Realm()
+
+        if(!NSUserDefaults.standardUserDefaults().boolForKey("isNotFirstLanuch"))
+        {
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isNotFirstLanuch")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            if let fuites = NSBundle(forClass:AppDelegate.self).pathForResource("fuites", ofType: "json") {
+                let data = NSData(contentsOfFile: fuites)!
+                let json = JSON(data:data)
+                let allFriutResults = json["results"]["allFruites"]
+                
+                for (index:String,subResults:JSON ) in allFriutResults
+                {
+                    var foodnames : SearchPridiction = SearchPridiction()
+                    if let userName = subResults["fruiteName"]["text"].string{
+                        foodnames.nameOfFoodToSearch = userName;
+                        realm.write {
+                            realm.add(foodnames)
+                        }
+                    }
+                }
+            }
+            if let vegitables = NSBundle(forClass:AppDelegate.self).pathForResource("vegitables", ofType: "json") {
+                let data = NSData(contentsOfFile: vegitables)!
+                let json = JSON(data:data)
+                let allFriutResults = json["results"]["collection1"]
+                
+                for (index:String,subResults:JSON ) in allFriutResults
+                {
+                    var foodnames : SearchPridiction = SearchPridiction()
+                    if let userName = subResults["vegi_name"]["text"].string{
+                        foodnames.nameOfFoodToSearch = userName;
+                        realm.write {
+                            realm.add(foodnames)
+                        }
+                    }
+                }
+                
+            }
+        }
+        let data  = realm.objects(SearchPridiction).filter("nameOfFoodToSearch CONTAINS[c] 'cuc'")
+        println(data)
+        
         return true
     }
 

@@ -130,8 +130,7 @@ class PCDAnalysisVC: UIViewController, UISearchBarDelegate, UIPickerViewDelegate
             return color2
         }
     }
-    
-    // Mark:- Search Bar Delegate Functions
+    // MARK: - Search Bar Delegate Functions
     
     func searchBarSearchButtonClicked( searchBar: UISearchBar)
     {
@@ -171,7 +170,7 @@ class PCDAnalysisVC: UIViewController, UISearchBarDelegate, UIPickerViewDelegate
         return range
     }
     
-    // Mark:- UIPicker View Delegate Functions
+    // Mark: - UIPicker View Delegate Functions
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1

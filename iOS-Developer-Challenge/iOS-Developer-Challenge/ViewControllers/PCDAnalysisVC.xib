@@ -52,9 +52,9 @@
                         <outlet property="delegate" destination="-1" id="elq-es-Dud"/>
                     </connections>
                 </tableView>
-                <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mAw-IC-cVy">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAw-IC-cVy">
+                    <rect key="frame" x="408" y="44" width="185" height="0.0"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="menu-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="P9D-Sf-RbQ"/>
                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQG-Uc-bL6">
                             <rect key="frame" x="0.0" y="-81" width="185" height="162"/>
                             <gestureRecognizers/>
@@ -69,14 +69,10 @@
                     <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="QQG-Uc-bL6" firstAttribute="top" secondItem="mAw-IC-cVy" secondAttribute="top" id="2dc-fE-uHi"/>
-                        <constraint firstItem="P9D-Sf-RbQ" firstAttribute="top" secondItem="mAw-IC-cVy" secondAttribute="top" id="5lK-5t-tlS"/>
                         <constraint firstAttribute="bottom" secondItem="QQG-Uc-bL6" secondAttribute="bottom" id="B3b-MG-NCM"/>
-                        <constraint firstAttribute="trailing" secondItem="P9D-Sf-RbQ" secondAttribute="trailing" id="KYC-AR-edb"/>
                         <constraint firstAttribute="trailing" secondItem="QQG-Uc-bL6" secondAttribute="trailing" id="Kbx-QM-af5"/>
                         <constraint firstAttribute="width" constant="185" id="O6p-RL-1Od"/>
                         <constraint firstAttribute="height" id="PUG-DJ-oEm"/>
-                        <constraint firstItem="P9D-Sf-RbQ" firstAttribute="leading" secondItem="mAw-IC-cVy" secondAttribute="leading" id="WqU-Nd-J7d"/>
-                        <constraint firstAttribute="bottom" secondItem="P9D-Sf-RbQ" secondAttribute="bottom" id="Xbu-pQ-4SM"/>
                         <constraint firstItem="QQG-Uc-bL6" firstAttribute="leading" secondItem="mAw-IC-cVy" secondAttribute="leading" id="m2f-WV-0z3"/>
                     </constraints>
                 </view>
@@ -103,7 +99,4 @@
             </connections>
         </tapGestureRecognizer>
     </objects>
-    <resources>
-        <image name="menu-bg.png" width="347" height="315"/>
-    </resources>
 </document>

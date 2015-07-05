@@ -13,14 +13,15 @@ import RealmSwift
 class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSource{
 
     @IBOutlet weak var tableViewFoodNames: UITableView!
-    var tasks:Results<FoodModel>?
+    @IBOutlet weak var searchBar: UISearchBar!
+    var searchResults:Results<SearchPridiction>?
+    let realm = Realm()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-       let realm = Realm()
-        
-        self.tasks = realm.objects(FoodModel)
         
         
+        self.searchResults = Results<SearchPridiction>?()
         //self.tableViewFoodNames .reloadData()
                // Do any additional setup after loading the view, typically from a nib.
     }
@@ -31,22 +32,59 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tasks!.count
+        if(self.searchResults != nil){
+            return self.searchResults!.count
+        }
+        
+        return 0;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("JSONCell", forIndexPath: indexPath) as! UITableViewCell
         
         var row = indexPath.row
-        let food : FoodModel = self.tasks![row];
-        cell.textLabel?.text = food.name
-        cell.detailTextLabel?.text = food.portions.first?.name
-
+        let food : SearchPridiction = self.searchResults![row];
+        cell.textLabel?.text = food.nameOfFoodToSearch
+        cell.textLabel?.textColor = UIColor.whiteColor()
         
         return cell
     }
-    // MARK: - Navigation
+    // MARK: - Search Bar Delegate Functions
     
+    func searchBarSearchButtonClicked( searchBar: UISearchBar)
+    {
+        self.searchBar.resignFirstResponder()
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar){
+        self.searchBar.resignFirstResponder()
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+       
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if count(searchText)>0
+        {
+            self.searchResults  = self.realm.objects(SearchPridiction).filter("nameOfFoodToSearch CONTAINS[c] %@",searchText)
+            self.tableViewFoodNames.reloadData()
+        }else
+        {
+
+        }
+        
+       
+        
+        
+    }
+    // MARK: - IB-Actions
+    @IBAction func btnCancelTapped(sender: UIButton) {
+        self.searchBar.resignFirstResponder()
+        
+    }
+    // MARK: - Navigation
+
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
 //        
 //        var object: AnyObject

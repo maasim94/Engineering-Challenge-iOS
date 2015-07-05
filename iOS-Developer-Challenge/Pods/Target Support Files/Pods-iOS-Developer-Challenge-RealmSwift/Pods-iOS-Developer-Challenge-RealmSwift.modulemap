@@ -1,6 +1,0 @@
-framework module RealmSwift {
-  umbrella header "Pods-iOS-Developer-Challenge-RealmSwift-umbrella.h"
-
-  export *
-  module * { export * }
-}
