@@ -4,12 +4,37 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFBlurSegue.xcscheme</key>
+		<key>Pods-iOS-Developer-Challenge-AFBlurSegue.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Alamofire.xcscheme</key>
+		<key>Pods-iOS-Developer-Challenge-Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-iOS-Developer-Challenge-Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-iOS-Developer-Challenge-RealmSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-iOS-Developer-Challenge-SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-iOS-Developer-Challenge-SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-iOS-Developer-Challenge-TPKeyboardAvoiding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -19,50 +44,45 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Realm.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RealmSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>100AF7B91543AF81291C97D4</key>
+		<key>13E88013985B1E0F5EEECD75</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>76DF33B707E6E55D6ECC9C1A</key>
+		<key>3AFF6A5B7CACB22869CC78B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>94A589768431F86C860A2C9D</key>
+		<key>545332A5D71C0C9E9F83B239</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C7ED2A5C1A63CB52599A5ADC</key>
+		<key>6283810DF870091D9949ABB8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CC7BA4BEBAFCEB92C9203DE0</key>
+		<key>64E3E6D92B5B4087C5A3CB08</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D502E67EC917C625490CE460</key>
+		<key>B717A7E25D17524904933665</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BCC34CF8DB1AFF582F5A3E23</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D6534D983CA53724BE574F5D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

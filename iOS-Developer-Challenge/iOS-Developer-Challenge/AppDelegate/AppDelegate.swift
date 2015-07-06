@@ -59,8 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
             }
         }
-        let data  = realm.objects(SearchPridiction).filter("nameOfFoodToSearch CONTAINS[c] 'cuc'")
-        println(data)
         
         return true
     }

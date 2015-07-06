@@ -6,19 +6,25 @@ PODS:
   - Realm/Headers (0.93.2)
   - RealmSwift (0.93.2):
     - Realm (= 0.93.2)
+  - SVProgressHUD (1.1.3)
   - SwiftyJSON (2.2.0)
+  - TPKeyboardAvoiding (1.2.8)
 
 DEPENDENCIES:
   - AFBlurSegue (~> 1.2.1)
   - Alamofire (~> 1.2)
   - RealmSwift
+  - SVProgressHUD
   - SwiftyJSON (~> 2.2.0)
+  - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
   AFBlurSegue: 27e55f015360f4e11117d2c3a959dbb5316eef78
   Alamofire: 5550bf0b575ed1a4bf9be572f9463e1015cc169e
   Realm: 2fdd0ae74f730e190384e0338d8a0d3654df8220
   RealmSwift: 231b064da9f98b1c4f325fe1f1cb8756aae2b8d6
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   SwiftyJSON: 0b3e6c07af17ff745e77e8e9984097b55c956e5c
+  TPKeyboardAvoiding: f1ef0028fe9ba98ef2871cf55b4bbc39cae0267b
 
-COCOAPODS: 0.38.0.beta.1
+COCOAPODS: 0.37.2

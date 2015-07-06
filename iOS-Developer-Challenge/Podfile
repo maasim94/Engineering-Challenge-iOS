@@ -8,6 +8,8 @@ pod 'Alamofire', '~> 1.2'
 pod 'SwiftyJSON', '~> 2.2.0'
 pod 'RealmSwift'
 pod 'AFBlurSegue', '~> 1.2.1'
+pod 'TPKeyboardAvoiding'
+pod 'SVProgressHUD'
 
 end
 
