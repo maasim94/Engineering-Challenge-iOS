@@ -30,11 +30,13 @@ class AddRecordViewController: UIViewController {
     @IBOutlet weak var saturated: UITextField!
     @IBOutlet weak var diataryFibre: UITextField!
     
+    @IBOutlet weak var contentView: UIView!
     var delegate : AddRecordViewControllerDelegate! = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.contentView.layer.cornerRadius = 5.0
+        self.contentView.layer.masksToBounds = true
         // Do any additional setup after loading the view.
     }
 
@@ -100,14 +102,10 @@ class AddRecordViewController: UIViewController {
         
         return randomString
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - Style bar
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
-    */
 
 }

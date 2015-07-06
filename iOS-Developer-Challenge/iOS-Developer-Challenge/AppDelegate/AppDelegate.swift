@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        //Load data from first launch to be used in search field
+        //Data is Taken using kamino API
         let realm = Realm()
 
         if(!NSUserDefaults.standardUserDefaults().boolForKey("isNotFirstLanuch"))

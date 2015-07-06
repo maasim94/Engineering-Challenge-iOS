@@ -28,6 +28,7 @@ class DataTableViewCell: UITableViewCell {
     @IBOutlet weak var lblPolyValue: UILabel!
     @IBOutlet weak var lblPolyUnit: UILabel!
 
+    @IBOutlet weak var btnReadMore: UIButton!
     
     
 

@@ -20,7 +20,8 @@ class InitialViewController: UIViewController , SearchViewControllerDelegate , A
     @IBOutlet weak var foodDataTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-           // Do any additional setup after loading the view.
+        
+        // get data from realm for any saved searches
         self.foodDataSaved = self.realm.objects(FoodModel)
 
     
@@ -33,6 +34,7 @@ class InitialViewController: UIViewController , SearchViewControllerDelegate , A
     // MARK: - Table view data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        //Check if there is no data so app does not crash
         if(self.foodDataTableView != nil){
             return self.foodDataSaved!.count
         }
@@ -40,6 +42,8 @@ class InitialViewController: UIViewController , SearchViewControllerDelegate , A
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //Check if there is no data so app does not crash
+
         if(self.foodDataTableView != nil){
             let data : FoodModel = self.foodDataSaved![section]
             return data.portions.count
@@ -54,7 +58,7 @@ class InitialViewController: UIViewController , SearchViewControllerDelegate , A
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("DataCell", forIndexPath: indexPath) as! DataTableViewCell
-        
+        //Map Data of food
         var row = indexPath.row
         var section = indexPath.section
         let data : FoodModel = self.foodDataSaved![section]
@@ -68,15 +72,16 @@ class InitialViewController: UIViewController , SearchViewControllerDelegate , A
         cell.lblSodiumUnit.text = portions.important.sodium.unit
         cell.lblTotalCarbsUnit.text = portions.important.total_carbs.unit
         
-        
         cell.lblDiaFiberValue.text = NSString(format: "%f",portions.important.dietary_fibre.value) as String
         cell.lblPolyValue.text = NSString(format: "%f",portions.important.polyunsaturated.value) as String
         cell.lblPotassiumValue.text = NSString(format: "%f",portions.important.potassium.value) as String
         cell.lblSaturatedValue.text = NSString(format: "%f",portions.important.saturated.value) as String
         cell.lblSodiumValue.text = NSString(format: "%f",portions.important.sodium.value) as String
         cell.lblTotalCarbsValue.text = NSString(format: "%f",portions.important.total_carbs.value) as String
-
         
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.ViewContainer.layer.cornerRadius = 5.0
+        cell.ViewContainer.layer.masksToBounds = true
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -87,6 +92,7 @@ class InitialViewController: UIViewController , SearchViewControllerDelegate , A
     // MARK: - NetwrokCall
     func getFoodDetailsOfFood(foodName:String)
     {
+        //query server by food name
         SVProgressHUD.show()
         Alamofire.request(.GET, "http://test.holmusk.com/food/search", parameters: ["q" : foodName]).responseJSON(options: NSJSONReadingOptions()) { (req, res, jsonValue, error) -> Void in
             if(error != nil) {
@@ -105,20 +111,20 @@ class InitialViewController: UIViewController , SearchViewControllerDelegate , A
     // MARK: - ParseData
     func parseDataAndSave(json:JSON)
     {
-        
-        var allData : NSMutableArray =  NSMutableArray()
+        //parse given data from feed
         for (index: String, subJson: JSON) in json {
             
+            //Model created locally
             var foodModel : FoodModel = FoodModel()
             
             
             let name : String = subJson["name"].string!
             let _id : String = subJson["_id"].string!
             
-            
             foodModel._id = _id
             foodModel.name = name
             
+            //Get nutrion details
             let portions : JSON = subJson["portions"]
             
             for (index:String,portion:JSON ) in portions
@@ -149,14 +155,15 @@ class InitialViewController: UIViewController , SearchViewControllerDelegate , A
                 
                 
             }
-            allData.addObject(foodModel)
+            //Save object into realm
             self.realm.write {
                 self.realm.add(foodModel, update: true)
             }
             
         }
-        
+        //Get All objects from realm
         self.foodDataSaved = self.realm.objects(FoodModel)
+        //reload tableView
         self.foodDataTableView.reloadData()
         
     }
@@ -173,7 +180,6 @@ class InitialViewController: UIViewController , SearchViewControllerDelegate , A
     }
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
           // Get the new view controller using segue.destinationViewController.
         if (segue.identifier == "toSearch")
@@ -188,11 +194,13 @@ class InitialViewController: UIViewController , SearchViewControllerDelegate , A
      
     }
     // MARK: - Search Delegate
-
+    //Delegate Function for Search Module
     func SearchVCdidSearchComplete(selectedFood: String) {
         self.getFoodDetailsOfFood(selectedFood)
     }
     // MARK: - Add record Delegate
+    //Delegate Function for Adding Record Module
+
     func AddRecordVCRecordAdded() {
         self.foodDataSaved = self.realm.objects(FoodModel)
         self.foodDataTableView.reloadData()
