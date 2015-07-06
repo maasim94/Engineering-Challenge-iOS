@@ -14,6 +14,9 @@
 		EC29CC5E1B46B60600692C48 /* PCDTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC29CC5A1B46B60600692C48 /* PCDTableViewCell.xib */; };
 		EC4951B11B4473D70094082E /* FoodModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4951B01B4473D70094082E /* FoodModels.swift */; };
 		EC4951B31B447B960094082E /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4951B21B447B960094082E /* InitialViewController.swift */; };
+		EC76F37E1B47BAE80060C078 /* fuites.json in Resources */ = {isa = PBXBuildFile; fileRef = EC76F37C1B47BAE80060C078 /* fuites.json */; };
+		EC76F37F1B47BAE80060C078 /* vegitables.json in Resources */ = {isa = PBXBuildFile; fileRef = EC76F37D1B47BAE80060C078 /* vegitables.json */; };
+		EC76F3821B47DF660060C078 /* SearchPridiction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76F3811B47DF660060C078 /* SearchPridiction.swift */; };
 		EC960B551B43E10A008DCF56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC960B531B43E10A008DCF56 /* Main.storyboard */; };
 		EC960B571B43E10A008DCF56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC960B561B43E10A008DCF56 /* Images.xcassets */; };
 		EC960B5A1B43E10A008DCF56 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC960B581B43E10A008DCF56 /* LaunchScreen.xib */; };
@@ -44,6 +47,9 @@
 		EC29CC5A1B46B60600692C48 /* PCDTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCDTableViewCell.xib; sourceTree = "<group>"; };
 		EC4951B01B4473D70094082E /* FoodModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodModels.swift; sourceTree = "<group>"; };
 		EC4951B21B447B960094082E /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		EC76F37C1B47BAE80060C078 /* fuites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fuites.json; sourceTree = "<group>"; };
+		EC76F37D1B47BAE80060C078 /* vegitables.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vegitables.json; sourceTree = "<group>"; };
+		EC76F3811B47DF660060C078 /* SearchPridiction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPridiction.swift; sourceTree = "<group>"; };
 		EC833D051B453ADF003C18C4 /* iOS-Developer-Challenge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-Developer-Challenge-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC960B4A1B43E10A008DCF56 /* iOS-Developer-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Developer-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC960B4E1B43E10A008DCF56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,7 +109,10 @@
 		EC4951AF1B4473C90094082E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EC76F37C1B47BAE80060C078 /* fuites.json */,
+				EC76F37D1B47BAE80060C078 /* vegitables.json */,
 				EC4951B01B4473D70094082E /* FoodModels.swift */,
+				EC76F3811B47DF660060C078 /* SearchPridiction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -274,8 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC960B551B43E10A008DCF56 /* Main.storyboard in Resources */,
+				EC76F37E1B47BAE80060C078 /* fuites.json in Resources */,
 				EC960B5A1B43E10A008DCF56 /* LaunchScreen.xib in Resources */,
 				EC29CC5C1B46B60600692C48 /* PCDAnalysisVC.xib in Resources */,
+				EC76F37F1B47BAE80060C078 /* vegitables.json in Resources */,
 				EC960B571B43E10A008DCF56 /* Images.xcassets in Resources */,
 				EC29CC5E1B46B60600692C48 /* PCDTableViewCell.xib in Resources */,
 			);
@@ -349,6 +360,7 @@
 				EC29CC5D1B46B60600692C48 /* PCDTableViewCell.swift in Sources */,
 				EC29CC5B1B46B60600692C48 /* PCDAnalysisVC.swift in Sources */,
 				EC4951B31B447B960094082E /* InitialViewController.swift in Sources */,
+				EC76F3821B47DF660060C078 /* SearchPridiction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

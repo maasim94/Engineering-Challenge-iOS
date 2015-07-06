@@ -79,14 +79,14 @@ class InitialViewController: UIViewController {
 
                     }
                     allData.addObject(foodModel)
-                    //realmArray.append(foodModel)
                     realm.write {
                         realm.add(foodModel, update: true)
                     }
 //                    println(foodModel)
 
                 }
-                println(realm.objects(FoodModel))
+                self.performSegueWithIdentifier("present", sender: self)
+              //  println(realm.objects(FoodModel))
                 // You only need to do this once (per thread)
             
                 // Add to the Realm inside a transaction
@@ -128,7 +128,7 @@ class InitialViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let nextController = segue.destinationViewController.topViewController as! ViewController
+     //   let nextController = segue.destinationViewController.topViewController as! ViewController
       //  nextController.json = self.json;
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
